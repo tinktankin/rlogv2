@@ -1,0 +1,49 @@
+{% extends 'pipeline/base.html' %}
+
+{% block content %}
+<h1>Pipeline</h1>
+
+<form action="excel_import" method="post" enctype="multipart/form-data">
+    Upload File<br>
+    {%csrf_token %}
+    <input type="file" name="document">
+    <button type="submit">Upload</button><br><br>
+    Enter column name respectively:<br>
+    Recruiter : <input type="text" name="num1"><br>
+    Client : <input type="text" name="num2"><br>
+    Position : <input type="text" name="num3"><br>
+    Date of recruiter : <input type="text" name="num4"><br>
+    Date of cv submission : <input type="text" name="num5"><br>
+    Name of Candidate: <input type="text" name="num6"><br>
+    Current Status number : <input type="text" name="num7"><br>
+    Current status description : <input type="text" name="num8"><br>
+    Interview date : <input type="text" name="num9"><br>
+    Remarks: <input type="text" name="num10"><br>
+    Profile and skills  : <input type="text" name="num11"><br>
+    Current organisation  : <input type="text" name="num12"><br>
+    Qualification : <input type="text" name="num13"><br>
+    Experience : <input type="text" name="num14"><br>
+    Current Loc : <input type="text" name="num15"><br>
+    Contact no : <input type="text" name="num16"><br>
+    Alternate contact no : <input type="text" name="num17"><br>
+    Email id : <input type="text" name="num18"><br>
+    Current salary : <input type="text" name="num19"><br>
+    Expected salary : <input type="text" name="num20"><br>
+    Notice period : <input type="text" name="num21"><br>
+    Offer date : <input type="text" name="num22"><br>
+    Offer amount : <input type="text" name="num23"><br>
+    Joining date : <input type="text" name="num24"><br>
+    Vacancy code : <input type="text" name="num25"><br>
+    Applicant code : <input type="text" name="num26"><br>
+    Birth date : <input type="text" name="num27"><br>
+    Birth month : <input type="text" name="num28"><br>
+    Birth year : <input type="text" name="num29"><br>
+    Preferred company : <input type="text" name="num30"><br>
+    Preferred Location : <input type="text" name="num31"><br>
+    Week no : <input type="text" name="num32"><br>
+    Year : <input type="text" name="num33"><br>
+    <input type="submit">
+
+</form>
+
+{% endblock%}
