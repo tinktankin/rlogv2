@@ -46,11 +46,13 @@ def fieldmatching(request):
         ###To keep the same columns in case of matching 'fields' and ###'names', add a checkbox on the html page
             matched = { key:request.POST.get(key, False) for key in names }
             df.rename(columns = matched, inplace = True)
- #       df.drop('id', axis=1, inplace=True) # Drop Remove rows or columns by specifying label names and corresponding axis, or by specifying directly index or column names. When using a multi-index, labels on different levels can be removed by specifying the level.
+        # df.drop('id', axis=1, inplace=True) # Drop Remove rows or columns by specifying label names and corresponding axis, or by specifying directly index or column names. When using a multi-index, labels on different levels can be removed by specifying the level.
         df.set_index('id', drop=True, inplace=True) # Set the DataFrame index (row labels) using one or more existing columns or arrays (of the correct length). The index can replace the existing index or expand on it.
-        # "None of ['apple', 'ball', 'cat', 'dog', 'eagle', 'fox', 'gorrila', 'hen', 'int', 'jet', 'kite', 'lamba', 'mamba', 'next', 'o', 'p'] are in the columns"
-        #         dictionary = df.to_dict(orient="index") #  Convert the DataFrame to a dictionary. orientation 
+        # Error msg: "None of ['apple', 'ball', 'cat', 'dog', 'eagle', 'fox', 'gorrila', 'hen', 'int', 'jet', 'kite', 'lamba', 'mamba', 'next', 'o', 'p'] are in the columns"
+        # dictionary = df.to_dict(orient="index") #  Convert the DataFrame to a dictionary. orientation 
         # df.to_dict('index') return this > {'row1': {'col1': 1, 'col2': 0.5}, 'row2': {'col1': 2, 'col2': 0.75}} 
+        # I am using "id" as the basis to upload the excel we can change it to any other columns heading in user columns.
+        # df.set_index('id', drop=True, inplace=True)
 
         for index, object in dictionary.items():
             # model = MODEL_NAME()
