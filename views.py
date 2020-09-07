@@ -51,8 +51,8 @@ def fieldmatching(request):
         # Error msg: "None of ['apple', 'ball', 'cat', 'dog', 'eagle', 'fox', 'gorrila', 'hen', 'int', 'jet', 'kite', 'lamba', 'mamba', 'next', 'o', 'p'] are in the columns"
         # dictionary = df.to_dict(orient="index") #  Convert the DataFrame to a dictionary. orientation 
         # df.to_dict('index') return this > {'row1': {'col1': 1, 'col2': 0.5}, 'row2': {'col1': 2, 'col2': 0.75}} 
-        # I am using "id" as the basis to upload the excel we can change it to any other columns heading in user columns.
-        # df.set_index('id', drop=True, inplace=True)
+        # I am using "id" as the basis to upload the excel we can change it to any other columns heading in user columns. df.set_index('id', drop=True, inplace=True)
+        
 
         for index, object in dictionary.items():
             # model = MODEL_NAME()
