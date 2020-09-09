@@ -2,7 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Pipeline_class(models.Model):
-    Recruiter = models.CharField(max_length=150,null=True)
+
+    Recruiter = models.CharField(max_length=100,null=True)
     Client = models.CharField(max_length=150,null=True)
     Position = models.CharField(max_length=100,null=True)
     Recruiter_date = models.DateField(null=True)
@@ -32,11 +33,9 @@ class Pipeline_class(models.Model):
     Birth_month = models.IntegerField(null=True)
     Birth_year = models.IntegerField(null=True)
     Preferred_company = models.TextField(null=True)
-    Preferred_Loc = models.TextField(null=True)
+    Preferred_Location = models.TextField(null=True)
     Week_no = models.IntegerField(null=True)
     Year = models.IntegerField(null=True)
 
-
-
-
-
+    def savedata(self):
+        self.save()
