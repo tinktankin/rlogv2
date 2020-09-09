@@ -93,6 +93,22 @@ DATABASES = {
         'PASSWORD': 'rasika',
         'HOST': '127.0.0.1',
         'PORT': '5432',
+    },
+'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'pipe',
+        'USER': 'postgres',
+        'PASSWORD': 'rasika',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    },
+'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'Rasika',
+        'USER': 'postgres',
+        'PASSWORD': 'rasika',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
