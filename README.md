@@ -43,7 +43,7 @@ git remote add upstream https://github.com/tinktankin/rlogv2.git
 ```
 * Step 7: Check your remotes.
 ```bash
-git remote -v
+git remote -r
 ```
 Expected output:
 ```bash
