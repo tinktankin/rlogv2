@@ -1,4 +1,4 @@
-﻿{% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -56,19 +56,38 @@
                         <label class="col-sm-3 form-control-label">Material Inputs</label>
                         <div class="col-sm-9">
                     {% for name in names %}
-                          <div class="form-group-material">
+                            <div class="form-group-material">
 
-              <div style="margin-top:15px ">   {{name}}: </div>
-        <div style="margin-left: 150px">  <select name="{{name}}">
+                                <div style="margin-top:15px ">   {{name}}: </div>
+                                <div style="margin-left: 150px">
+                                    <select name="{{name}}" id="{{name}}" onchange="getSelectValue()">
 
-            <option disabled selected value> -- select an option -- </option>
-            {% for field in fields %}
-              <option value={{field}}>{{field}}</option>    
-            {% endfor %}
-        </select> </div>
-                   {% endfor %}
+                                        <option disabled selected value> -- select an option -- </option>
+                                        {% for field in fields %}
+                                        <option value={{field}}>{{field}}</option>
 
-                          </div>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+
+                                <script>
+                                  function getSelectValue()
+                                  {
+
+                                      var x = document.getElementById("{{name}}").value;
+                                      console.log(x);
+
+
+
+                                  }
+                                </script>
+                                {% fields.remove(x) %}
+
+
+                                {% endfor %}
+
+
+                            </div>
               
                           <input type="hidden" name="path_name" value={{path_name}}> 
                       
